@@ -63,7 +63,11 @@
           <h1 class="section-one-title">
             Effective Solutions for Your Business
           </h1>
-          <button class="section-one-button button" type="button">
+          <button
+            class="section-one-button button"
+            type="button"
+            onclick="document.getElementById('backdrop').style.display='block'"
+          >
             Order Service
           </button>
         </div>
@@ -460,10 +464,14 @@
       </div>
     </footer>
     <!----------- Backdrop Page ------------>
-    <div class="backdrop">
+    <div class="backdrop" id="backdrop">
       <div class="modal-window">
         <!---- Close Button ---->
-        <button type="button" class="modal-close-button">
+        <button
+          type="button"
+          class="modal-close-button"
+          onclick="document.getElementById('backdrop').style.display='none'"
+        >
           <svg class="modal-close-button-icon" width="8" height="8">
             <use href="./images/icons.svg#close-window"></use>
           </svg>
@@ -510,14 +518,14 @@
               </svg>
             </div>
           </div>
-          <dic class="modal-form-textarea">
+          <div class="modal-form-textarea modal-form-group">
             <label class="modal-form-label" for="user-comment">Comment</label>
             <textarea
               class="modal-form-input textarea"
               name="user-comment"
               id="user-comment"
               placeholder="Text input"
-              ></textarea>
+            ></textarea>
           </div>
           <div class="modal-form-checkbox-group">
             <input
@@ -525,16 +533,17 @@
               class="modal-form-checkbox visually-hidden"
               name="user-privacy"
               id="user-privacy"
-              value="true"/>
-              <label for="user-privacy" class="modal-form-privacy-text">
-                <span class="modal-form-checkbox-design">
-                  <svg class="modal-form-checkbox-icon" width="10" height="8">
-                    <use href="./images/icons.svg#icon-checkbox"></use>
-                  </svg>
-                </span>
-                I accept the herms and conditions of the
-                <a class="modal-form-privacy-link" href="">Privacy Policy</a>
-              </label>
+              value="true"
+            />
+            <label for="user-privacy" class="modal-form-privacy-text">
+              <span class="modal-form-checkbox-design">
+                <svg class="modal-form-checkbox-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-checkbox"></use>
+                </svg>
+              </span>
+              I accept the herms and conditions of the
+              <a class="modal-form-privacy-link" href="">Privacy Policy</a>
+            </label>
           </div>
           <button type="submit" class="modal-submit-button button">Send</button>
         </form>
